@@ -1,0 +1,362 @@
+<!-- 
+Name : Shekh sohil rafik miya
+Enrollment no : 23002171510038
+Roll no: 166
+Batch : B5
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deca Music</title>
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/1219530788.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="script.js"></script>
+    
+  </head>
+  <body>
+    <div class="fixed-top " style="border-bottom: 2px solid gray;">
+    <div class="container-fluid bg-black d-flex p-2 ">
+      <div class="mx-3 text-light">
+        <h3>Deca Music</h3>
+      </div>
+      <div class="p-2 form" id="search" style="width: 30%;">
+        <input type="text" placeholder="Search songs" class="form-control">
+      </div>
+      <a href="#" class="btn btn-black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" id="toggler"><i class="bi bi-list"></i></a>
+    </div>
+  </div>
+    <div class="d-flex flex-row " id="mcon">
+      <div id="menu" class="bg-black pt-1">
+        <div class="d-flex flex-column justify-content-start">
+          <a href="#" class="btn btn-black btn-md m-1 p-2 active "><i
+              class="fa-solid fa-house"></i><span class="m-2">Home</span></a>
+          <a href="explore.html" class="btn btn-black btn-md m-1 p-2"><i
+              class="fa-regular fa-compass"></i><span
+              class="m-2">Explore</span></a></li>
+        <a href="library.html" class="btn btn-black btn-md  m-1 p-2"><i class="bi bi-music-note-list"></i><span
+            class="m-2">Library</span></a>
+        <a href="upgrade.html" class="btn btn-black btn-md m-1 p-2"><i class="bi bi-vinyl-fill"></i><span
+            class="m-2">Upgrade</span></a>
+        <div class="container bg-secondary" style="height: 2px;"></div>
+        <label class="text-center m-2 d-md-none d-lg-block "
+          data-bs-toggle="modal" data-bs-target="#exampleModal"><a href="#"
+            class="btn btn-dark m-1 py-2" style="border-radius: 60px;"><span
+              class="px-2 "><i class="fa-solid fa-plus "></i><span
+                class="m-2">New playlist</span></a></span></label>
+      </div>
+    </div>
+    <div id="mbody" class="bg-black text-light ">
+      <div class="container types">
+        <a class="btn btn-secondary btn-sm line" href="#"
+          style="opacity: 0.7;"><span class>Podcasts</span></a>
+        <a class="btn btn-secondary btn-sm line" href="#"
+          style="opacity: 0.7;"><span>Feel good</span></a>
+        <a class="btn btn-secondary btn-sm line" href="#"
+          style="opacity: 0.7;"><span>Work out</span></a>
+        <a class="btn btn-secondary btn-sm line" href="#"
+          style="opacity: 0.7;"><span>Energise</span></a>
+      </div>
+      <div class="container pt-3 d-flex justify-content-between">
+        <h2 class="h2 mt-auto">Trending Songs</h2>
+        <h2 class="h2"><button class="rounds btn btn-dark btn-md border mx-2" onclick="scrollSongleft('scroll-song')"><i class="fa-solid fa-chevron-left"></i></button><button class="rounds btn btn-dark btn-md border" onclick="scrollSongright('scroll-song')"><i class="fa-solid fa-chevron-right"></i></button></h2>
+      </div>
+      <div class="container mt-3 scrollable-div-song" id="scroll-song">
+        <div class="item" > 
+          <div class="d-flex pt-1" onclick="changeSong(this)" id="0">
+            <img src="Covers/jalebi baby.png" class="rounded smimg">
+            <div class="d-flex flex-column px-2">
+              <span>Jalebi Baby</span>
+              <span>Tesher</span>
+            </div>
+          </div>
+
+          <div class="d-flex pt-1" onclick="changeSong(this)" id="1">
+            <img src="Covers/queen of hearts.png" class="rounded smimg">
+            <div class="d-flex flex-column px-2">
+              <span>Queen Of Hearts</span>
+              <span>someone</span>
+            </div>
+          </div>
+
+          <div class="d-flex pt-1" onclick="changeSong(this)" id="2">
+            <img src="Covers/Espresso.jpg" class="rounded smimg">
+            <div class="d-flex flex-column px-2">
+              <span>Espresso</span>
+              <span>Jason Derulo</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex pt-1">
+            <img src="Covers/shape of you.png" class="rounded smimg">
+            <div class="d-flex flex-column px-2">
+              <span>Shape Of You</span>
+              <span>Ed shareen</span>
+            </div>
+          </div>
+
+          <div class="d-flex pt-1">
+            <img src="Covers/say may name.png" class="rounded smimg">
+            <div class="d-flex flex-column px-2">
+              <span>Say My Name</span>
+              <span>someone</span>
+            </div>
+          </div>
+
+          <div class="d-flex pt-1">
+            <img src="Covers/cheap thrills.png" class="rounded smimg">
+            <div class="d-flex flex-column px-2">
+              <span>Cheap Thrills</span>
+              <span>someone</span>
+            </div>
+          </div>
+
+          
+        </div>
+        <div class=" item">
+          <div class="d-flex pt-1">
+            <img src="Covers/Faded.jpg" class="rounded smimg">
+            <div class="d-flex flex-column px-2">
+              <span>Faded</span>
+              <span>Alan Walker</span>
+            </div>
+          </div>
+
+          <div class="d-flex pt-1">
+            <img src="Covers/Stree-2.jpg" class="rounded smimg">
+            <div class="d-flex flex-column px-2">
+              <span>Aai Nai</span>
+              <span>Tesher</span>
+            </div>
+          </div>
+
+          <div class="d-flex pt-1">
+            <img src="Covers/say may name.png" class="rounded smimg">
+            <div class="d-flex flex-column px-2">
+              <span>Say my name</span>
+              <span>unknown</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex pt-1">
+            <img src="Covers/jalebi baby.png" class="rounded smimg">
+            <div class="d-flex flex-column px-2">
+              <span>Jalebi Baby</span>
+              <span>Tesher</span>
+            </div>
+          </div>
+
+          <div class="d-flex pt-1">
+            <img src="Covers/jalebi baby.png" class="rounded smimg">
+            <div class="d-flex flex-column px-2">
+              <span>Jalebi Baby</span>
+              <span>Tesher</span>
+            </div>
+          </div>
+
+          <div class="d-flex pt-1">
+            <img src="Covers/jalebi baby.png" class="rounded smimg">
+            <div class="d-flex flex-column px-2">
+              <span>Jalebi Baby</span>
+              <span>Tesher</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex pt-1">
+            <img src="Covers/jalebi baby.png" class="rounded smimg">
+            <div class="d-flex flex-column px-2">
+              <span>Jalebi Baby</span>
+              <span>Tesher</span>
+            </div>
+          </div>
+
+          <div class="d-flex pt-1">
+            <img src="Covers/jalebi baby.png" class="rounded smimg">
+            <div class="d-flex flex-column px-2">
+              <span>Jalebi Baby</span>
+              <span>Tesher</span>
+            </div>
+          </div>
+
+          <div class="d-flex pt-1">
+            <img src="Covers/jalebi baby.png" class="rounded smimg">
+            <div class="d-flex flex-column px-2">
+              <span>Jalebi Baby</span>
+              <span>Tesher</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container pt-3 d-flex justify-content-between mt-5">
+        <h2 class="h2 mt-auto">Trending Playlists</h2>
+        <h2 class="h2"><button class="rounds btn btn-dark btn-md border mx-2" onclick="scrollSongleft('scroll-playlist')"><i class="fa-solid fa-chevron-left"></i></button><button class="rounds btn btn-dark btn-md border" onclick="scrollSongright('scroll-playlist')"><i class="fa-solid fa-chevron-right"></i></button></h2>
+      </div>
+      <!-- Playlists -->
+      <div class="container scrollable-div-playlist " id="scroll-playlist">
+        <div class="item-playlist text-center" > 
+          <div class="d-flex flex-column pt-1" id="punjabi party">
+            <img src="Covers/punjabi party.jpg" class="playlistImg rounded">
+              <span>Panjabi Party</span>
+          </div>
+      </div>
+        <div class="item-playlist text-center" > 
+          <div class="d-flex flex-column pt-1" id="punjabi party">
+            <img src="Covers/90s romance.jpg" class="playlistImg rounded">
+              <span>90's Romance</span>
+          </div>
+      </div>
+        <div class="item-playlist text-center" > 
+          <div class="d-flex flex-column pt-1" id="90">
+            <img src="Covers/bollowood dance.jpg" class="playlistImg rounded">
+              <span>Bollywood Dance</span>
+          </div>
+      </div>
+        <div class="item-playlist text-center" > 
+          <div class="d-flex flex-column pt-1" id="90">
+            <img src="Covers/bollywood romance.jpg" class="playlistImg rounded">
+              <span>Bollywood Romance</span>
+          </div>
+      </div>
+        <div class="item-playlist text-center" > 
+          <div class="d-flex flex-column pt-1" id="90">
+            <img src="Covers/mixed1.jpg" class="playlistImg rounded">
+              <span>English Mixed</span>
+          </div>
+      </div>
+    </div>
+    <!-- Second playlists -->
+    <div class="container pt-3 d-flex justify-content-between mt-5 mb-5">
+      <h2 class="h2 mt-auto">Popular Playlists</h2>
+      <h2 class="h2"><button class="rounds btn btn-dark btn-md border mx-2" onclick="scrollSongleft('scroll-playlist2')"><i class="fa-solid fa-chevron-left"></i></button><button class="rounds btn btn-dark btn-md border" onclick="scrollSongright('scroll-playlist2')"><i class="fa-solid fa-chevron-right"></i></button></h2>
+    </div>
+      <div class="container scrollable-div-playlist " id="scroll-playlist2">
+        <div class="item-playlist text-center" > 
+          <div class="d-flex flex-column pt-1" id="punjabi party">
+            <img src="Covers/Stree-2.jpg" class="playlistImg rounded">
+              <span>Stree-2</span>
+          </div>
+      </div>
+        <div class="item-playlist text-center" > 
+          <div class="d-flex flex-column pt-1" id="punjabi party">
+            <img src="Covers/Espresso.jpg" class="playlistImg rounded">
+              <span>Espresso</span>
+          </div>
+      </div>
+        <div class="item-playlist text-center" > 
+          <div class="d-flex flex-column pt-1" id="90">
+            <img src="Covers/ed sheeran.jpg" class="playlistImg rounded">
+              <span>Ed sheeran</span>
+          </div>
+      </div>
+        <div class="item-playlist text-center" > 
+          <div class="d-flex flex-column pt-1" id="90">
+            <img src="Covers/Faded.jpg" class="playlistImg rounded">
+              <span>Alan Walker</span>
+          </div>
+      </div>
+        <div class="item-playlist text-center" > 
+          <div class="d-flex flex-column pt-1" id="90">
+            <img src="Covers/mixed2.jpg" class="playlistImg rounded">
+              <span>English Mixed</span>
+          </div>
+      </div>
+    </div>
+
+    </div><!--div mbody end-->
+    <!-- Current song & play/pause -->
+    <div class="fixed-bottom">
+    <div class="container-fluid d-flex justify-content-between bg-dark   text-white ">
+      <div class="d-flex justify-content-evenly">
+        <button class=" my-auto btn btn-dark rounds"><a href="#" class="text-light h5"><i class="fa-solid fa-backward-step"></i></a></button>
+        <button class="my-auto  btn btn-dark rounds"><a href="#" class="text-light h1"><i class="bi bi-play-fill" id="play"></i></a></button>
+        <button class="my-auto btn btn-dark rounds"><a href="#" class="text-light h5"><i class="fa-solid fa-forward-step"></i></a></button>
+    </div>
+    <div class="d-flex">
+        <img src="Covers/jalebi baby.png" alt="" width="50px" height="50px" class="mx-1" id="curSongImg">
+        <span class="px-auto" id="curSongName">Jalebi baby</span>
+    </div>
+    <div class="d-flex">
+        <span class="pt-2 more"><input type="range" id="volume" class="bg-light"></span>
+        <span class="btn btn-dark more"><i class="bi bi-volume-up"></i></span>
+        <span class="btn btn-dark more"><i class="bi bi-repeat"></i></span>
+        <span class="btn btn-dark more"><i class="bi bi-shuffle"></i></span>
+        <span class="btn btn-dark more"><a href="#"><i class="bi bi-caret-up-fill text-white"></i></a></span>
+    </div>
+    </div>
+    </div>
+<!-- modal for creating new playlist -->
+    <div class="modal fade" id="exampleModal" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">New
+              playlist</h1>
+          </div>
+          <div class="modal-body bg-dark">
+            <form action="#" class="form">
+              <input type="text" placeholder="Title"
+                class="text-light bg-dark px-5 m-1 form-control">
+              <br>
+              <input type="text" placeholder="Description"
+                class="text-light bg-dark px-5 m-1 form-control">
+              <br>
+              <select name id class="form-select">
+                <optgroup class="form-select">
+                  <option value="form-control">
+                    Private
+                  </option>
+                  <option value selected>
+                    Public
+                  </option>
+                </optgroup>
+              </select>
+            </form>
+          </div>
+          <div class="modal-footer bg-dark">
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal"
+              style="border-radius: 50px;">Cancel</button>
+            <button type="button" class="btn btn-light"
+              style="border-radius: 50px;">Create</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--modal end-->
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 d-flex flex-column">
+          <li class="nav-item">
+            <a href="#" class="btn btn-dark btn-md m-1  p-2" data-bs-dismiss="offcanvas"><span class="m-2">&times</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="home.html" class="btn btn-dark btn-md m-1  p-2 active "><i class="fa-solid fa-house"></i><span class="m-2">Home</span></a>
+          </li>
+          <li class="nav-item">
+                <a href="explore.html" class="btn btn-dark btn-md m-1 p-2"><i class="fa-regular fa-compass"></i><span class="m-2">Explore</span></a></li>
+          </li>
+          <li class="nav-item">
+                <a href="library.html" class="btn btn-dark btn-md  m-1 p-2"><i class="bi bi-music-note-list"></i><span class="m-2">Library</span></a>
+          </li>
+          <li class="nav-item">
+                <a href="upgrade.html" class="btn btn-dark btn-md m-1 p-2"><i class="bi bi-vinyl-fill"></i><span class="m-2">Upgrade</span></a> 
+          </li>
+          <li class="nav-item">
+          <a href="#" class="btn btn-dark m-1 " style="border-radius: 60px;" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class=""><i class="fa-solid fa-plus "></i><span class="m-2">New playlist</span></a></span>
+      </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

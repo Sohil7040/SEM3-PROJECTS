@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Music</title>
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/1219530788.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="fixed-top " style="border-bottom: 2px solid gray;">
+    <div class="container-fluid bg-black d-flex p-2 ">
+      <div class="mx-3 text-light">
+        <h3>Deca music</h3>
+      </div>
+      <div class="p-2 form" id="search" style="width: 30%;">
+        <input type="text" placeholder="Search songs" class="form-control">
+      </div>
+      <a href="#" class="btn btn-black" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" id="toggler"><i class="bi bi-list"></i></a>
+    </div>
+  </div>
+    <div class="d-flex flex-row " id="mcon">
+      <div id="menu" class="bg-black pt-1">
+        <div class="d-flex flex-column justify-content-start">
+          <a href="home.html" class="btn btn-black btn-md m-1 p-2"><i
+              class="fa-solid fa-house"></i><span class="m-2">Home</span></a>
+          <a href="#" class="btn btn-black btn-md m-1 p-2 "><i
+              class="fa-regular fa-compass"></i><span
+              class="m-2">Explore</span></a></li>
+        <a href class="btn btn-black btn-md  m-1 p-2 active "><span
+            class="m-2">Library</span></a>
+        <a href="upgrade.html" class="btn btn-black btn-md m-1 p-2"><span
+            class="m-2">Upgrade</span></a>
+        <div class="container bg-secondary" style="height: 2px;"></div>
+        <label class="text-center m-2 d-md-none d-lg-block "
+          data-bs-toggle="modal" data-bs-target="#exampleModal"><a href="#"
+            class="btn btn-dark m-1 py-2" style="border-radius: 60px;"><span
+              class="px-2 "><i class="fa-solid fa-plus "></i><span
+                class="m-2">New playlist</span></a></span></label>
+      </div>
+    </div>
+    <div id="mbody" class="bg-black text-light ">
+        <h2 class="h2 mt-auto">Your Playlists</h2>
+        <div class="container-fluid d-flex mt-3" id="main-play">
+            <p class="d-flex flex-column">
+                <a href="#liked-music" data-bs-toggle="modal"><img src="Covers/liked-music.png" alt="liked" class="library-img rounded"></a>
+                <span class="my-auto ">Liked Songs</span>
+                <span class="my-auto small text-secondary"><i class="bi bi-pin-fill"></i>  Auto playlist</span>
+            </p>
+            <p class="d-flex flex-column mx-4">
+                <a href="#saved-music" data-bs-toggle="modal"><img src="Covers/saved-music.png" alt="liked" class="library-img rounded"></a>
+                <span class="my-auto inline" >Episodes for later</span>
+                <span class="my-auto small text-secondary" style="width: 8rem;">Episodes that you save for later</span>
+            </p>
+        </div>
+        <div id="liked" class="collapse">
+            <h1>Hello</h1>
+        </div>
+    </div><!--div mbody end-->
+    <!-- Current song & play/pause -->
+    <div class="fixed-bottom">
+    <div class="container-fluid d-flex justify-content-between bg-dark text-white ">
+      <div class="d-flex justify-content-evenly">
+        <button class=" my-auto btn btn-dark rounds"><a href="#" class="text-light h5"><i class="fa-solid fa-backward-step"></i></a></button>
+        <button class="my-auto  btn btn-dark rounds"><a href="#" class="text-light h1"  onclick="playMusic()"><i class="bi bi-play-fill" id="play"></i></a></button>
+        <button class="my-auto btn btn-dark rounds"><a href="#" class="text-light h5"><i class="fa-solid fa-forward-step"></i></a></button>
+    </div>
+    <div class="d-flex">
+        <img src="jalebi baby.png" alt="" width="50px" height="50px" class="mx-1" id="curSongImg">
+        <span class="px-5" id="curSongName">Jalebi baby</span>
+    </div>
+    <div class="d-flex">
+        <span class="pt-2 more"><input type="range" id="volume" class="bg-light"></span>
+        <span class="btn btn-dark more"><i class="bi bi-volume-up"></i></span>
+        <span class="btn btn-dark more"><i class="bi bi-repeat"></i></span>
+        <span class="btn btn-dark more"><i class="bi bi-shuffle"></i></span>
+        <span class="btn btn-dark more"><a href="#"><i class="bi bi-caret-up-fill text-white"></i></a></span>
+    </div>
+    </div>
+    </div>
+<!-- modal for creating new playlist -->
+    <div class="modal fade" id="exampleModal" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">New
+              playlist</h1>
+          </div>
+          <div class="modal-body bg-dark">
+            <form action="#" class="form">
+              <input type="text" placeholder="Title"
+                class="text-light bg-dark px-5 m-1 form-control">
+              <br>
+              <input type="text" placeholder="Description"
+                class="text-light bg-dark px-5 m-1 form-control">
+              <br>
+              <select name id class="form-select">
+                <optgroup class="form-select">
+                  <option value="form-control">
+                    Private
+                  </option>
+                  <option value selected>
+                    Public
+                  </option>
+                </optgroup>
+              </select>
+            </form>
+          </div>
+          <div class="modal-footer bg-dark">
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal"
+              style="border-radius: 50px;">Cancel</button>
+            <button type="button" class="btn btn-light"
+              style="border-radius: 50px;">Create</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--modal end-->
+    <!-- liked modal -->
+    <div class="modal fade" id="liked-music" tabindex="-1"
+      aria-labelledby="liked" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-light">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Liked Music</h1>
+          </div>
+          <div class="modal-body text-bg-dark text-center p-5">
+            <h3>No music liked yet!</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Saved modal -->
+    <div class="modal fade" id="saved-music" tabindex="-1"
+    aria-labelledby="liked" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-dark text-light">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Saved Music</h1>
+        </div>
+        <div class="modal-body text-bg-dark text-center p-5">
+          <h3>No music saved yet!</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 d-flex flex-column">
+          <li class="nav-item">
+            <a href="#" class="btn btn-dark btn-md m-1  p-2" data-bs-dismiss="offcanvas"><span class="m-2">&times</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="home.html" class="btn btn-dark btn-md m-1  p-2 active "><i class="fa-solid fa-house"></i><span class="m-2">Home</span></a>
+          </li>
+          <li class="nav-item">
+                <a href="explore.html" class="btn btn-dark btn-md m-1 p-2"><i class="fa-regular fa-compass"></i><span class="m-2">Explore</span></a></li>
+          </li>
+          <li class="nav-item">
+                <a href="library.html" class="btn btn-dark btn-md  m-1 p-2"><i class="bi bi-music-note-list"></i><span class="m-2">Library</span></a>
+          </li>
+          <li class="nav-item">
+                <a href="upgrade.html" class="btn btn-dark btn-md m-1 p-2"><i class="bi bi-vinyl-fill"></i><span class="m-2">Upgrade</span></a> 
+          </li>
+          <li class="nav-item">
+          <a href="#" class="btn btn-dark m-1 " style="border-radius: 60px;" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class=""><i class="fa-solid fa-plus "></i><span class="m-2">New playlist</span></a></span>
+      </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
